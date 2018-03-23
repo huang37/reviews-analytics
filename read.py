@@ -11,6 +11,31 @@ print('檔案讀取完了，總共有', len(data), '筆資料')
 
 print(data[0])
 
+
+sum_len = 0
+for d in data:
+  sum_len += len(d)
+  print(sum_len)
+
+print('留言的平均長度是', sum_len/len(data))
+
+new = []
+for d in data:
+  if len(d) < 100:
+    new.append(d)
+print('一共有', len(new), '筆的留言長度小於100')
+print(new[0])
+
+
+good = []
+for d in data:
+  if 'good' in d:
+    good.append(d)
+print('一共有', len(good), '筆的留言')
+print(good[0])
+
+
+# 文字計數
 wc = {}
 for d in data:
   words = d.split()
@@ -33,36 +58,6 @@ while  True:
   else:
     print('這個字沒有出現過喔！！！')
 print('感謝使用')
-
-
-
-
-
-
-
-# sum_len = 0
-# for d in data:
-#   sum_len += len(d)
-#   print(sum_len)
-
-# print('留言的平均長度是', sum_len/len(data))
-
-# new = []
-# for d in data:
-#   if len(d) < 100:
-#     new.append(d)
-# print('一共有', len(new), '筆的留言長度小於100')
-# print(new[0])
-
-
-# good = []
-# for d in data:
-#   if 'good' in d:
-#     good.append(d)
-# print('一共有', len(good), '筆的留言')
-# print(good[0])
-
-
 
 
 
